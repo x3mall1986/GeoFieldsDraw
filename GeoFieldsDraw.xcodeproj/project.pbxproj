@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7803DAFBF6C1136DC01231EB /* libPods-GeoFieldsDraw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6935AB29764590E3D13B8874 /* libPods-GeoFieldsDraw.a */; };
 		A201F3301D2B9D0900F1DD2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A201F32F1D2B9D0900F1DD2E /* main.m */; };
 		A201F3331D2B9D0900F1DD2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A201F3321D2B9D0900F1DD2E /* AppDelegate.m */; };
 		A201F3361D2B9D0900F1DD2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A201F3351D2B9D0900F1DD2E /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6935AB29764590E3D13B8874 /* libPods-GeoFieldsDraw.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GeoFieldsDraw.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A27A673F29537AA1CBA970A /* Pods-GeoFieldsDraw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoFieldsDraw.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoFieldsDraw/Pods-GeoFieldsDraw.debug.xcconfig"; sourceTree = "<group>"; };
+		91375F374B89E2D4713CB866 /* Pods-GeoFieldsDraw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoFieldsDraw.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoFieldsDraw/Pods-GeoFieldsDraw.release.xcconfig"; sourceTree = "<group>"; };
 		A201F32B1D2B9D0800F1DD2E /* GeoFieldsDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoFieldsDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A201F32F1D2B9D0900F1DD2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A201F3311D2B9D0900F1DD2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7803DAFBF6C1136DC01231EB /* libPods-GeoFieldsDraw.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5487993A5237308FE0775497 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A27A673F29537AA1CBA970A /* Pods-GeoFieldsDraw.debug.xcconfig */,
+				91375F374B89E2D4713CB866 /* Pods-GeoFieldsDraw.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A201F3221D2B9D0800F1DD2E = {
 			isa = PBXGroup;
 			children = (
 				A201F32D1D2B9D0900F1DD2E /* GeoFieldsDraw */,
 				A201F32C1D2B9D0800F1DD2E /* Products */,
+				5487993A5237308FE0775497 /* Pods */,
+				E1DB562B3E6E1851A858BC0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +95,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E1DB562B3E6E1851A858BC0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6935AB29764590E3D13B8874 /* libPods-GeoFieldsDraw.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A201F3421D2B9D0900F1DD2E /* Build configuration list for PBXNativeTarget "GeoFieldsDraw" */;
 			buildPhases = (
+				68C69DDD386AC188F993CBA6 /* [CP] Check Pods Manifest.lock */,
 				A201F3271D2B9D0800F1DD2E /* Sources */,
 				A201F3281D2B9D0800F1DD2E /* Frameworks */,
 				A201F3291D2B9D0800F1DD2E /* Resources */,
+				142E7F74F7232D83254521D5 /* [CP] Embed Pods Frameworks */,
+				53D4219824FF6857B9EC6555 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		142E7F74F7232D83254521D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoFieldsDraw/Pods-GeoFieldsDraw-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53D4219824FF6857B9EC6555 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GeoFieldsDraw/Pods-GeoFieldsDraw-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68C69DDD386AC188F993CBA6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A201F3271D2B9D0800F1DD2E /* Sources */ = {
@@ -261,6 +336,7 @@
 		};
 		A201F3431D2B9D0900F1DD2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A27A673F29537AA1CBA970A /* Pods-GeoFieldsDraw.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GeoFieldsDraw/Info.plist;
@@ -272,6 +348,7 @@
 		};
 		A201F3441D2B9D0900F1DD2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91375F374B89E2D4713CB866 /* Pods-GeoFieldsDraw.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GeoFieldsDraw/Info.plist;
@@ -300,6 +377,7 @@
 				A201F3441D2B9D0900F1DD2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
