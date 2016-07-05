@@ -10,6 +10,7 @@
 #import "GFDAPIClient.h"
 #import "GFDFieldsListTableViewCell.h"
 #import "GFDFieldInfoViewController.h"
+#import "GeoJSONSerialization.h"
 
 @interface ViewController ()<UITableViewDataSource, UITabBarDelegate>
 
@@ -53,7 +54,7 @@
 //    NSString *name = fieldInfo[@"properties"][@"name"];
     cell.nameLabel.text = fieldInfo[@"properties"][@"name"];
     cell.cropLabel.text = fieldInfo[@"properties"][@"crop"];
-    cell.tillAreaLabel.text = [NSString stringWithFormat:@"%@", fieldInfo[@"properties"][@"till_area"]];
+    cell.tillAreaLabel.text = [NSString stringWithFormat:@"%@ ha", fieldInfo[@"properties"][@"till_area"]];
     
     return cell;
 }
@@ -70,6 +71,7 @@
      
      GFDFieldInfoViewController *viewController = segue.destinationViewController;
      viewController.polygon = self.fieldsList[indexPath.row][@"geometry"];
+     viewController.property = self.fieldsList[indexPath.row][@"properties"];
  }
 
 @end

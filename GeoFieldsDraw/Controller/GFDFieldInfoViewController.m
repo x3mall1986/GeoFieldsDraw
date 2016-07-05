@@ -7,11 +7,15 @@
 //
 
 #import "GFDFieldInfoViewController.h"
+#import "GFDGMSCalculateOperation.h"
+
 @import GoogleMaps;
 
 @interface GFDFieldInfoViewController ()<GMSMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet GMSMapView *mapsView;
+@property (weak, nonatomic) IBOutlet UILabel *fieldNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fieldCropAndAreaLabel;
 
 @end
 
@@ -21,55 +25,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.fieldNameLabel.text = self.property[@"name"];
+    self.fieldCropAndAreaLabel.text = [NSString stringWithFormat:@"%@ \t %@ ha", self.property[@"crop"], self.property[@"till_area"]];
+    
     // Set the mapType to Satellite
     self.mapsView.mapType = kGMSTypeSatellite;
     
-    NSLog(@"%@", self.polygon);
+    GMSPolygon *polygon = [GFDGMSCalculateOperation polygonForMap:self.mapsView byGeoObject:self.polygon];
     
-    NSArray *polygonPoints = [self getCoordinatesFromMultyLevelArray:self.polygon[@"coordinates"]];
-    
-//    NSArray *shapes = [GeoJSONSerialization shapesFromGeoJSONFeatureCollection:self.polygon error:nil];
-    
-//    for (MKShape *shape in shapes) {
-//        if ([shape isKindOfClass:[MKPointAnnotation class]]) {
-//            [mapView addAnnotation:shape];
-//        } else if ([shape conformsToProtocol:@protocol(MKOverlay)]) {
-//            [mapView addOverlay:(id <MKOverlay>)shape];
-//        }
-//        NSLog(@"%@", shape);
-//    }
-    
-//    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:[polygonPoints[0][0] doubleValue]
-//                                                            longitude:[polygonPoints[0][1] doubleValue]
-//                                                                 zoom:8];
-    
-    
-//    [self.mapsView animateToCameraPosition:camera];
-    // Create a rectangular path
-    GMSMutablePath *rect = [GMSMutablePath path];
-    
-    for (NSArray *coordinates in polygonPoints) {
-        [rect addCoordinate:CLLocationCoordinate2DMake([coordinates[1] doubleValue],
-                                                       [coordinates[0] doubleValue])];
-    }
-    
-    GMSCoordinateBounds *cam = [[GMSCoordinateBounds alloc] initWithPath:rect];
-    GMSCameraPosition *camera = [self.mapsView cameraForBounds:cam insets:UIEdgeInsetsMake(50.0, 50.0, 50.0, 50.0)];
-    self.mapsView.camera = camera;
-    
-//    [rect addCoordinate:CLLocationCoordinate2DMake(37.36, -122.0)];
-//    [rect addCoordinate:CLLocationCoordinate2DMake(37.45, -122.0)];
-//    [rect addCoordinate:CLLocationCoordinate2DMake(37.45, -122.2)];
-//    [rect addCoordinate:CLLocationCoordinate2DMake(37.36, -122.2)];
-    
-    // Create the polygon, and assign it to the map.
-    GMSPolygon *polygon = [GMSPolygon polygonWithPath:rect];
-    polygon.fillColor = [UIColor colorWithRed:0.25 green:0 blue:0 alpha:0.05];
-    polygon.strokeColor = [UIColor whiteColor];
-    polygon.strokeWidth = 2;
-    polygon.map = self.mapsView;
-
-//    NSLog(@"%@", coordinates);
+    GMSCoordinateBounds *coordinateBounds = [[GMSCoordinateBounds alloc] initWithPath:polygon.path];
+    //    GMSCameraPosition *camera = [self.mapsView cameraForBounds:coordinateBounds insets:UIEdgeInsetsZero];
+    //    self.mapsView.camera = camera;
+    [self.mapsView animateWithCameraUpdate:[GMSCameraUpdate fitBounds:coordinateBounds]];
 }
 
 - (NSArray *)getCoordinatesFromMultyLevelArray:(NSArray *)multiLevelArray
@@ -83,15 +50,5 @@
     
     return poligonArray;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -11,5 +11,6 @@
 @interface GFDFieldInfoViewController : UIViewController
 
 @property (strong, nonatomic) NSDictionary *polygon;
+@property (strong, nonatomic) NSDictionary *property;
 
 @end

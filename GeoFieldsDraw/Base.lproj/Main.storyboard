@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -12,6 +13,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3h0-vM-H8G">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.37438778180484789" green="0.74793061642897318" blue="0.93335700757575757" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="OHl-rt-s7K"/>
@@ -111,6 +113,7 @@
                                 <segment title="List"/>
                                 <segment title="On Map"/>
                             </segments>
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
@@ -134,19 +137,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mrS-Qc-mea" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="64" width="600" height="436"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="236"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmZ-Jk-wdP">
+                                <rect key="frame" x="20" y="308" width="42" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.37438778179999999" green="0.74793061640000003" blue="0.93335700759999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZO-T0-dwF">
+                                <rect key="frame" x="20" y="337" width="42" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zmZ-Jk-wdP" firstAttribute="top" secondItem="mrS-Qc-mea" secondAttribute="bottom" constant="8" id="9uf-0b-opT"/>
                             <constraint firstItem="mrS-Qc-mea" firstAttribute="top" secondItem="Wan-LH-Bqe" secondAttribute="bottom" id="Tds-Hu-aH3"/>
-                            <constraint firstItem="Gee-Ns-hAo" firstAttribute="top" secondItem="mrS-Qc-mea" secondAttribute="bottom" constant="100" id="ggA-JB-QfX"/>
+                            <constraint firstItem="UZO-T0-dwF" firstAttribute="top" secondItem="zmZ-Jk-wdP" secondAttribute="bottom" constant="9" id="dtJ-eq-gnO"/>
+                            <constraint firstItem="Gee-Ns-hAo" firstAttribute="top" secondItem="mrS-Qc-mea" secondAttribute="bottom" multiplier="2" id="ggA-JB-QfX"/>
                             <constraint firstItem="mrS-Qc-mea" firstAttribute="leading" secondItem="XAx-bm-kjm" secondAttribute="leading" id="izM-s5-TnU"/>
                             <constraint firstAttribute="trailing" secondItem="mrS-Qc-mea" secondAttribute="trailing" id="rQk-ua-0EK"/>
+                            <constraint firstItem="UZO-T0-dwF" firstAttribute="leading" secondItem="XAx-bm-kjm" secondAttribute="leading" constant="20" id="vW9-Ef-VuH"/>
+                            <constraint firstItem="zmZ-Jk-wdP" firstAttribute="leading" secondItem="XAx-bm-kjm" secondAttribute="leading" constant="20" id="vw7-Ok-LgI"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fieldCropAndAreaLabel" destination="UZO-T0-dwF" id="Cu6-UI-pmQ"/>
+                        <outlet property="fieldNameLabel" destination="zmZ-Jk-wdP" id="RW8-Lh-xSU"/>
                         <outlet property="mapsView" destination="mrS-Qc-mea" id="D1I-rO-qc5"/>
                     </connections>
                 </viewController>

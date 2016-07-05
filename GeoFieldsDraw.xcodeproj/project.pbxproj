@@ -17,6 +17,7 @@
 		A2A31C491D2BAB4D0023D50E /* GFDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A31C481D2BAB4D0023D50E /* GFDAPIClient.m */; };
 		A2BAFE4E1D2BB99500C505B1 /* GFDFieldsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BAFE4D1D2BB99500C505B1 /* GFDFieldsListTableViewCell.m */; };
 		A2BAFE541D2BD0CE00C505B1 /* GFDFieldInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BAFE531D2BD0CE00C505B1 /* GFDFieldInfoViewController.m */; };
+		A2BAFE581D2C745A00C505B1 /* GFDGMSCalculateOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BAFE571D2C745A00C505B1 /* GFDGMSCalculateOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		A2BAFE4D1D2BB99500C505B1 /* GFDFieldsListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFDFieldsListTableViewCell.m; sourceTree = "<group>"; };
 		A2BAFE521D2BD0CE00C505B1 /* GFDFieldInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFDFieldInfoViewController.h; sourceTree = "<group>"; };
 		A2BAFE531D2BD0CE00C505B1 /* GFDFieldInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFDFieldInfoViewController.m; sourceTree = "<group>"; };
+		A2BAFE561D2C745A00C505B1 /* GFDGMSCalculateOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFDGMSCalculateOperation.h; sourceTree = "<group>"; };
+		A2BAFE571D2C745A00C505B1 /* GFDGMSCalculateOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFDGMSCalculateOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,7 @@
 			children = (
 				A201F3311D2B9D0900F1DD2E /* AppDelegate.h */,
 				A201F3321D2B9D0900F1DD2E /* AppDelegate.m */,
+				A2BAFE551D2C73FF00C505B1 /* HelpfulClasses */,
 				A2A31C431D2BAACD0023D50E /* Model */,
 				A2A31C441D2BAACD0023D50E /* Views */,
 				A2A31C401D2BAACD0023D50E /* Controller */,
@@ -142,6 +146,15 @@
 			name = Storyboards;
 			sourceTree = "<group>";
 		};
+		A2BAFE551D2C73FF00C505B1 /* HelpfulClasses */ = {
+			isa = PBXGroup;
+			children = (
+				A2BAFE561D2C745A00C505B1 /* GFDGMSCalculateOperation.h */,
+				A2BAFE571D2C745A00C505B1 /* GFDGMSCalculateOperation.m */,
+			);
+			path = HelpfulClasses;
+			sourceTree = "<group>";
+		};
 		E1DB562B3E6E1851A858BC0E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +197,7 @@
 				TargetAttributes = {
 					A201F32A1D2B9D0800F1DD2E = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6SDH5QKSY6;
 					};
 				};
 			};
@@ -276,6 +290,7 @@
 				A201F3301D2B9D0900F1DD2E /* main.m in Sources */,
 				A2BAFE541D2BD0CE00C505B1 /* GFDFieldInfoViewController.m in Sources */,
 				A2BAFE4E1D2BB99500C505B1 /* GFDFieldsListTableViewCell.m in Sources */,
+				A2BAFE581D2C745A00C505B1 /* GFDGMSCalculateOperation.m in Sources */,
 				A2A31C491D2BAB4D0023D50E /* GFDAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -389,11 +404,15 @@
 			baseConfigurationReference = 7A27A673F29537AA1CBA970A /* Pods-GeoFieldsDraw.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = GeoFieldsDraw/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ua.paksukro.GeoFieldsDraw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -402,11 +421,15 @@
 			baseConfigurationReference = 91375F374B89E2D4713CB866 /* Pods-GeoFieldsDraw.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = GeoFieldsDraw/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ua.paksukro.GeoFieldsDraw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
