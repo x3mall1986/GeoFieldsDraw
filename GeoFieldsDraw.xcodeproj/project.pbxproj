@@ -10,10 +10,11 @@
 		7803DAFBF6C1136DC01231EB /* libPods-GeoFieldsDraw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6935AB29764590E3D13B8874 /* libPods-GeoFieldsDraw.a */; };
 		A201F3301D2B9D0900F1DD2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A201F32F1D2B9D0900F1DD2E /* main.m */; };
 		A201F3331D2B9D0900F1DD2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A201F3321D2B9D0900F1DD2E /* AppDelegate.m */; };
-		A201F3361D2B9D0900F1DD2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A201F3351D2B9D0900F1DD2E /* ViewController.m */; };
 		A201F3391D2B9D0900F1DD2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A201F3371D2B9D0900F1DD2E /* Main.storyboard */; };
 		A201F33B1D2B9D0900F1DD2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A201F33A1D2B9D0900F1DD2E /* Assets.xcassets */; };
 		A201F33E1D2B9D0900F1DD2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A201F33C1D2B9D0900F1DD2E /* LaunchScreen.storyboard */; };
+		A2A31C451D2BAACD0023D50E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A31C421D2BAACD0023D50E /* ViewController.m */; };
+		A2A31C491D2BAB4D0023D50E /* GFDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A31C481D2BAB4D0023D50E /* GFDAPIClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,12 +25,14 @@
 		A201F32F1D2B9D0900F1DD2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A201F3311D2B9D0900F1DD2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A201F3321D2B9D0900F1DD2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A201F3341D2B9D0900F1DD2E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A201F3351D2B9D0900F1DD2E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A201F3381D2B9D0900F1DD2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A201F33A1D2B9D0900F1DD2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A201F33D1D2B9D0900F1DD2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A201F33F1D2B9D0900F1DD2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2A31C411D2BAACD0023D50E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A2A31C421D2BAACD0023D50E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A2A31C471D2BAB4D0023D50E /* GFDAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFDAPIClient.h; sourceTree = "<group>"; };
+		A2A31C481D2BAB4D0023D50E /* GFDAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFDAPIClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,13 +79,12 @@
 			children = (
 				A201F3311D2B9D0900F1DD2E /* AppDelegate.h */,
 				A201F3321D2B9D0900F1DD2E /* AppDelegate.m */,
-				A201F3341D2B9D0900F1DD2E /* ViewController.h */,
-				A201F3351D2B9D0900F1DD2E /* ViewController.m */,
-				A201F3371D2B9D0900F1DD2E /* Main.storyboard */,
-				A201F33A1D2B9D0900F1DD2E /* Assets.xcassets */,
-				A201F33C1D2B9D0900F1DD2E /* LaunchScreen.storyboard */,
-				A201F33F1D2B9D0900F1DD2E /* Info.plist */,
+				A2A31C431D2BAACD0023D50E /* Model */,
+				A2A31C441D2BAACD0023D50E /* Views */,
+				A2A31C401D2BAACD0023D50E /* Controller */,
+				A2A31C461D2BAADF0023D50E /* Storyboards */,
 				A201F32E1D2B9D0900F1DD2E /* Supporting Files */,
+				A201F33A1D2B9D0900F1DD2E /* Assets.xcassets */,
 			);
 			path = GeoFieldsDraw;
 			sourceTree = "<group>";
@@ -90,9 +92,44 @@
 		A201F32E1D2B9D0900F1DD2E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A201F33F1D2B9D0900F1DD2E /* Info.plist */,
 				A201F32F1D2B9D0900F1DD2E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2A31C401D2BAACD0023D50E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A2A31C411D2BAACD0023D50E /* ViewController.h */,
+				A2A31C421D2BAACD0023D50E /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A2A31C431D2BAACD0023D50E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2A31C471D2BAB4D0023D50E /* GFDAPIClient.h */,
+				A2A31C481D2BAB4D0023D50E /* GFDAPIClient.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A2A31C441D2BAACD0023D50E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A2A31C461D2BAADF0023D50E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A201F3371D2B9D0900F1DD2E /* Main.storyboard */,
+				A201F33C1D2B9D0900F1DD2E /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		E1DB562B3E6E1851A858BC0E /* Frameworks */ = {
@@ -224,9 +261,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A201F3361D2B9D0900F1DD2E /* ViewController.m in Sources */,
+				A2A31C451D2BAACD0023D50E /* ViewController.m in Sources */,
 				A201F3331D2B9D0900F1DD2E /* AppDelegate.m in Sources */,
 				A201F3301D2B9D0900F1DD2E /* main.m in Sources */,
+				A2A31C491D2BAB4D0023D50E /* GFDAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +377,7 @@
 			baseConfigurationReference = 7A27A673F29537AA1CBA970A /* Pods-GeoFieldsDraw.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = GeoFieldsDraw/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ua.paksukro.GeoFieldsDraw;
@@ -351,6 +390,7 @@
 			baseConfigurationReference = 91375F374B89E2D4713CB866 /* Pods-GeoFieldsDraw.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEFINES_MODULE = NO;
 				INFOPLIST_FILE = GeoFieldsDraw/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ua.paksukro.GeoFieldsDraw;
