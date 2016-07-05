@@ -84,6 +84,7 @@
                                             <outlet property="cropLabel" destination="ua0-If-nVx" id="i4i-Fg-Gyn"/>
                                             <outlet property="nameLabel" destination="1sb-E1-MXO" id="5Uh-zJ-eqF"/>
                                             <outlet property="tillAreaLabel" destination="xm7-mH-wSA" id="zet-7L-vQa"/>
+                                            <segue destination="ccA-ZM-H9a" kind="show" id="x6C-s1-DQv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -119,6 +120,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-175" y="389"/>
+        </scene>
+        <!--Field Info View Controller-->
+        <scene sceneID="JTW-v7-3zz">
+            <objects>
+                <viewController id="ccA-ZM-H9a" customClass="GFDFieldInfoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wan-LH-Bqe"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gee-Ns-hAo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XAx-bm-kjm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mrS-Qc-mea" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="436"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mrS-Qc-mea" firstAttribute="top" secondItem="Wan-LH-Bqe" secondAttribute="bottom" id="Tds-Hu-aH3"/>
+                            <constraint firstItem="Gee-Ns-hAo" firstAttribute="top" secondItem="mrS-Qc-mea" secondAttribute="bottom" constant="100" id="ggA-JB-QfX"/>
+                            <constraint firstItem="mrS-Qc-mea" firstAttribute="leading" secondItem="XAx-bm-kjm" secondAttribute="leading" id="izM-s5-TnU"/>
+                            <constraint firstAttribute="trailing" secondItem="mrS-Qc-mea" secondAttribute="trailing" id="rQk-ua-0EK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapsView" destination="mrS-Qc-mea" id="D1I-rO-qc5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t09-lx-e4v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="531" y="389"/>
         </scene>
     </scenes>
 </document>

@@ -10,5 +10,6 @@ target 'GeoFieldsDraw' do
   pod 'MBProgressHUD', '~> 0.9.2'
   pod 'GoogleMaps'
   pod 'MagicalRecord', '~> 2.3'
+  pod 'GeoJSONSerialization', '~> 0.0.4'
   
 end

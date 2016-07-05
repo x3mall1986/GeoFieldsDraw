@@ -16,6 +16,7 @@
 		A2A31C451D2BAACD0023D50E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A31C421D2BAACD0023D50E /* ViewController.m */; };
 		A2A31C491D2BAB4D0023D50E /* GFDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A31C481D2BAB4D0023D50E /* GFDAPIClient.m */; };
 		A2BAFE4E1D2BB99500C505B1 /* GFDFieldsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BAFE4D1D2BB99500C505B1 /* GFDFieldsListTableViewCell.m */; };
+		A2BAFE541D2BD0CE00C505B1 /* GFDFieldInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BAFE531D2BD0CE00C505B1 /* GFDFieldInfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		A2A31C481D2BAB4D0023D50E /* GFDAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFDAPIClient.m; sourceTree = "<group>"; };
 		A2BAFE4C1D2BB99500C505B1 /* GFDFieldsListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFDFieldsListTableViewCell.h; sourceTree = "<group>"; };
 		A2BAFE4D1D2BB99500C505B1 /* GFDFieldsListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFDFieldsListTableViewCell.m; sourceTree = "<group>"; };
+		A2BAFE521D2BD0CE00C505B1 /* GFDFieldInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFDFieldInfoViewController.h; sourceTree = "<group>"; };
+		A2BAFE531D2BD0CE00C505B1 /* GFDFieldInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFDFieldInfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,8 @@
 			children = (
 				A2A31C411D2BAACD0023D50E /* ViewController.h */,
 				A2A31C421D2BAACD0023D50E /* ViewController.m */,
+				A2BAFE521D2BD0CE00C505B1 /* GFDFieldInfoViewController.h */,
+				A2BAFE531D2BD0CE00C505B1 /* GFDFieldInfoViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,6 +274,7 @@
 				A2A31C451D2BAACD0023D50E /* ViewController.m in Sources */,
 				A201F3331D2B9D0900F1DD2E /* AppDelegate.m in Sources */,
 				A201F3301D2B9D0900F1DD2E /* main.m in Sources */,
+				A2BAFE541D2BD0CE00C505B1 /* GFDFieldInfoViewController.m in Sources */,
 				A2BAFE4E1D2BB99500C505B1 /* GFDFieldsListTableViewCell.m in Sources */,
 				A2A31C491D2BAB4D0023D50E /* GFDAPIClient.m in Sources */,
 			);
