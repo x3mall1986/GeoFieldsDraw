@@ -1,0 +1,307 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A201F3301D2B9D0900F1DD2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A201F32F1D2B9D0900F1DD2E /* main.m */; };
+		A201F3331D2B9D0900F1DD2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A201F3321D2B9D0900F1DD2E /* AppDelegate.m */; };
+		A201F3361D2B9D0900F1DD2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A201F3351D2B9D0900F1DD2E /* ViewController.m */; };
+		A201F3391D2B9D0900F1DD2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A201F3371D2B9D0900F1DD2E /* Main.storyboard */; };
+		A201F33B1D2B9D0900F1DD2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A201F33A1D2B9D0900F1DD2E /* Assets.xcassets */; };
+		A201F33E1D2B9D0900F1DD2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A201F33C1D2B9D0900F1DD2E /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A201F32B1D2B9D0800F1DD2E /* GeoFieldsDraw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoFieldsDraw.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A201F32F1D2B9D0900F1DD2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A201F3311D2B9D0900F1DD2E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A201F3321D2B9D0900F1DD2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A201F3341D2B9D0900F1DD2E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A201F3351D2B9D0900F1DD2E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A201F3381D2B9D0900F1DD2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A201F33A1D2B9D0900F1DD2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A201F33D1D2B9D0900F1DD2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A201F33F1D2B9D0900F1DD2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A201F3281D2B9D0800F1DD2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A201F3221D2B9D0800F1DD2E = {
+			isa = PBXGroup;
+			children = (
+				A201F32D1D2B9D0900F1DD2E /* GeoFieldsDraw */,
+				A201F32C1D2B9D0800F1DD2E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A201F32C1D2B9D0800F1DD2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A201F32B1D2B9D0800F1DD2E /* GeoFieldsDraw.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A201F32D1D2B9D0900F1DD2E /* GeoFieldsDraw */ = {
+			isa = PBXGroup;
+			children = (
+				A201F3311D2B9D0900F1DD2E /* AppDelegate.h */,
+				A201F3321D2B9D0900F1DD2E /* AppDelegate.m */,
+				A201F3341D2B9D0900F1DD2E /* ViewController.h */,
+				A201F3351D2B9D0900F1DD2E /* ViewController.m */,
+				A201F3371D2B9D0900F1DD2E /* Main.storyboard */,
+				A201F33A1D2B9D0900F1DD2E /* Assets.xcassets */,
+				A201F33C1D2B9D0900F1DD2E /* LaunchScreen.storyboard */,
+				A201F33F1D2B9D0900F1DD2E /* Info.plist */,
+				A201F32E1D2B9D0900F1DD2E /* Supporting Files */,
+			);
+			path = GeoFieldsDraw;
+			sourceTree = "<group>";
+		};
+		A201F32E1D2B9D0900F1DD2E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A201F32F1D2B9D0900F1DD2E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A201F32A1D2B9D0800F1DD2E /* GeoFieldsDraw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A201F3421D2B9D0900F1DD2E /* Build configuration list for PBXNativeTarget "GeoFieldsDraw" */;
+			buildPhases = (
+				A201F3271D2B9D0800F1DD2E /* Sources */,
+				A201F3281D2B9D0800F1DD2E /* Frameworks */,
+				A201F3291D2B9D0800F1DD2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoFieldsDraw;
+			productName = GeoFieldsDraw;
+			productReference = A201F32B1D2B9D0800F1DD2E /* GeoFieldsDraw.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A201F3231D2B9D0800F1DD2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = PaksUkroInc;
+				TargetAttributes = {
+					A201F32A1D2B9D0800F1DD2E = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = A201F3261D2B9D0800F1DD2E /* Build configuration list for PBXProject "GeoFieldsDraw" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A201F3221D2B9D0800F1DD2E;
+			productRefGroup = A201F32C1D2B9D0800F1DD2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A201F32A1D2B9D0800F1DD2E /* GeoFieldsDraw */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A201F3291D2B9D0800F1DD2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A201F33E1D2B9D0900F1DD2E /* LaunchScreen.storyboard in Resources */,
+				A201F33B1D2B9D0900F1DD2E /* Assets.xcassets in Resources */,
+				A201F3391D2B9D0900F1DD2E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A201F3271D2B9D0800F1DD2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A201F3361D2B9D0900F1DD2E /* ViewController.m in Sources */,
+				A201F3331D2B9D0900F1DD2E /* AppDelegate.m in Sources */,
+				A201F3301D2B9D0900F1DD2E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A201F3371D2B9D0900F1DD2E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A201F3381D2B9D0900F1DD2E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A201F33C1D2B9D0900F1DD2E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A201F33D1D2B9D0900F1DD2E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A201F3401D2B9D0900F1DD2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A201F3411D2B9D0900F1DD2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A201F3431D2B9D0900F1DD2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GeoFieldsDraw/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ua.paksukro.GeoFieldsDraw;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A201F3441D2B9D0900F1DD2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GeoFieldsDraw/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ua.paksukro.GeoFieldsDraw;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A201F3261D2B9D0800F1DD2E /* Build configuration list for PBXProject "GeoFieldsDraw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A201F3401D2B9D0900F1DD2E /* Debug */,
+				A201F3411D2B9D0900F1DD2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A201F3421D2B9D0900F1DD2E /* Build configuration list for PBXNativeTarget "GeoFieldsDraw" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A201F3431D2B9D0900F1DD2E /* Debug */,
+				A201F3441D2B9D0900F1DD2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A201F3231D2B9D0800F1DD2E /* Project object */;
+}
