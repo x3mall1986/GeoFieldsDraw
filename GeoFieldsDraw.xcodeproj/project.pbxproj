@@ -15,6 +15,7 @@
 		A201F33E1D2B9D0900F1DD2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A201F33C1D2B9D0900F1DD2E /* LaunchScreen.storyboard */; };
 		A2A31C451D2BAACD0023D50E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A31C421D2BAACD0023D50E /* ViewController.m */; };
 		A2A31C491D2BAB4D0023D50E /* GFDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A31C481D2BAB4D0023D50E /* GFDAPIClient.m */; };
+		A2BAFE4E1D2BB99500C505B1 /* GFDFieldsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BAFE4D1D2BB99500C505B1 /* GFDFieldsListTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		A2A31C421D2BAACD0023D50E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A2A31C471D2BAB4D0023D50E /* GFDAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFDAPIClient.h; sourceTree = "<group>"; };
 		A2A31C481D2BAB4D0023D50E /* GFDAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFDAPIClient.m; sourceTree = "<group>"; };
+		A2BAFE4C1D2BB99500C505B1 /* GFDFieldsListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFDFieldsListTableViewCell.h; sourceTree = "<group>"; };
+		A2BAFE4D1D2BB99500C505B1 /* GFDFieldsListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFDFieldsListTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,8 @@
 		A2A31C441D2BAACD0023D50E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A2BAFE4C1D2BB99500C505B1 /* GFDFieldsListTableViewCell.h */,
+				A2BAFE4D1D2BB99500C505B1 /* GFDFieldsListTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 				A2A31C451D2BAACD0023D50E /* ViewController.m in Sources */,
 				A201F3331D2B9D0900F1DD2E /* AppDelegate.m in Sources */,
 				A201F3301D2B9D0900F1DD2E /* main.m in Sources */,
+				A2BAFE4E1D2BB99500C505B1 /* GFDFieldsListTableViewCell.m in Sources */,
 				A2A31C491D2BAB4D0023D50E /* GFDAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
