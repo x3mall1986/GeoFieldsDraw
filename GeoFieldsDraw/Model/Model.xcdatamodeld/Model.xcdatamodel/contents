@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Xcode 7.0">
+    <entity name="GFDFieldInfo" representedClassName="GFDFieldInfo" syncable="YES">
+        <attribute name="crop" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="properties.crop"/>
+            </userInfo>
+        </attribute>
+        <attribute name="geometry" optional="YES" attributeType="Transformable" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="geometry"/>
+            </userInfo>
+        </attribute>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="properties.name"/>
+            </userInfo>
+        </attribute>
+        <attribute name="tillArea" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES">
+            <userInfo>
+                <entry key="mappedKeyName" value="properties.till_area"/>
+            </userInfo>
+        </attribute>
+    </entity>
+    <elements>
+        <element name="GFDFieldInfo" positionX="-227" positionY="-15" width="128" height="103"/>
+    </elements>
+</model>

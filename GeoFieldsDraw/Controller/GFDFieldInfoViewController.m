@@ -8,6 +8,7 @@
 
 #import "GFDFieldInfoViewController.h"
 #import "GFDGMSCalculateOperation.h"
+#import "GFDFieldInfo.h"
 
 @import GoogleMaps;
 
@@ -25,13 +26,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.fieldNameLabel.text = self.property[@"name"];
-    self.fieldCropAndAreaLabel.text = [NSString stringWithFormat:@"%@ \t %@ ha", self.property[@"crop"], self.property[@"till_area"]];
+    self.fieldNameLabel.text = self.fieldInfo.name;;
+    self.fieldCropAndAreaLabel.text = [NSString stringWithFormat:@"%@ \t %@ ha", self.fieldInfo.crop, self.fieldInfo.tillArea];
     
     // Set the mapType to Satellite
     self.mapsView.mapType = kGMSTypeSatellite;
     
-    GMSPolygon *polygon = [GFDGMSCalculateOperation polygonForMap:self.mapsView byGeoObject:self.polygon];
+    GMSPolygon *polygon = [GFDGMSCalculateOperation polygonForMap:self.mapsView byGeoObject:self.fieldInfo.geometry];
     
     GMSCoordinateBounds *coordinateBounds = [[GMSCoordinateBounds alloc] initWithPath:polygon.path];
     //    GMSCameraPosition *camera = [self.mapsView cameraForBounds:coordinateBounds insets:UIEdgeInsetsZero];

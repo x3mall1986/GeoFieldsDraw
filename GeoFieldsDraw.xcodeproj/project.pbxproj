@@ -15,6 +15,9 @@
 		A201F33E1D2B9D0900F1DD2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A201F33C1D2B9D0900F1DD2E /* LaunchScreen.storyboard */; };
 		A2A31C451D2BAACD0023D50E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A31C421D2BAACD0023D50E /* ViewController.m */; };
 		A2A31C491D2BAB4D0023D50E /* GFDAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A31C481D2BAB4D0023D50E /* GFDAPIClient.m */; };
+		A2B6666A1D2D07180041D537 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2B666681D2D07180041D537 /* Model.xcdatamodeld */; };
+		A2B666711D2D13140041D537 /* GFDFieldInfo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B6666E1D2D13140041D537 /* GFDFieldInfo+CoreDataProperties.m */; };
+		A2B666721D2D13140041D537 /* GFDFieldInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B666701D2D13140041D537 /* GFDFieldInfo.m */; };
 		A2BAFE4E1D2BB99500C505B1 /* GFDFieldsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BAFE4D1D2BB99500C505B1 /* GFDFieldsListTableViewCell.m */; };
 		A2BAFE541D2BD0CE00C505B1 /* GFDFieldInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BAFE531D2BD0CE00C505B1 /* GFDFieldInfoViewController.m */; };
 		A2BAFE581D2C745A00C505B1 /* GFDGMSCalculateOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = A2BAFE571D2C745A00C505B1 /* GFDGMSCalculateOperation.m */; };
@@ -36,6 +39,11 @@
 		A2A31C421D2BAACD0023D50E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A2A31C471D2BAB4D0023D50E /* GFDAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFDAPIClient.h; sourceTree = "<group>"; };
 		A2A31C481D2BAB4D0023D50E /* GFDAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFDAPIClient.m; sourceTree = "<group>"; };
+		A2B666691D2D07180041D537 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		A2B6666D1D2D13140041D537 /* GFDFieldInfo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFDFieldInfo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		A2B6666E1D2D13140041D537 /* GFDFieldInfo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GFDFieldInfo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		A2B6666F1D2D13140041D537 /* GFDFieldInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFDFieldInfo.h; sourceTree = "<group>"; };
+		A2B666701D2D13140041D537 /* GFDFieldInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFDFieldInfo.m; sourceTree = "<group>"; };
 		A2BAFE4C1D2BB99500C505B1 /* GFDFieldsListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFDFieldsListTableViewCell.h; sourceTree = "<group>"; };
 		A2BAFE4D1D2BB99500C505B1 /* GFDFieldsListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFDFieldsListTableViewCell.m; sourceTree = "<group>"; };
 		A2BAFE521D2BD0CE00C505B1 /* GFDFieldInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFDFieldInfoViewController.h; sourceTree = "<group>"; };
@@ -122,8 +130,8 @@
 		A2A31C431D2BAACD0023D50E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A2A31C471D2BAB4D0023D50E /* GFDAPIClient.h */,
-				A2A31C481D2BAB4D0023D50E /* GFDAPIClient.m */,
+				A2B6666C1D2D072E0041D537 /* API */,
+				A2B6666B1D2D071F0041D537 /* DataBase */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,6 +152,27 @@
 				A201F33C1D2B9D0900F1DD2E /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		A2B6666B1D2D071F0041D537 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				A2B666681D2D07180041D537 /* Model.xcdatamodeld */,
+				A2B6666D1D2D13140041D537 /* GFDFieldInfo+CoreDataProperties.h */,
+				A2B6666E1D2D13140041D537 /* GFDFieldInfo+CoreDataProperties.m */,
+				A2B6666F1D2D13140041D537 /* GFDFieldInfo.h */,
+				A2B666701D2D13140041D537 /* GFDFieldInfo.m */,
+			);
+			name = DataBase;
+			sourceTree = "<group>";
+		};
+		A2B6666C1D2D072E0041D537 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A2A31C471D2BAB4D0023D50E /* GFDAPIClient.h */,
+				A2A31C481D2BAB4D0023D50E /* GFDAPIClient.m */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		A2BAFE551D2C73FF00C505B1 /* HelpfulClasses */ = {
@@ -285,9 +314,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2B666721D2D13140041D537 /* GFDFieldInfo.m in Sources */,
 				A2A31C451D2BAACD0023D50E /* ViewController.m in Sources */,
 				A201F3331D2B9D0900F1DD2E /* AppDelegate.m in Sources */,
+				A2B666711D2D13140041D537 /* GFDFieldInfo+CoreDataProperties.m in Sources */,
 				A201F3301D2B9D0900F1DD2E /* main.m in Sources */,
+				A2B6666A1D2D07180041D537 /* Model.xcdatamodeld in Sources */,
 				A2BAFE541D2BD0CE00C505B1 /* GFDFieldInfoViewController.m in Sources */,
 				A2BAFE4E1D2BB99500C505B1 /* GFDFieldsListTableViewCell.m in Sources */,
 				A2BAFE581D2C745A00C505B1 /* GFDGMSCalculateOperation.m in Sources */,
@@ -455,6 +487,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A2B666681D2D07180041D537 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A2B666691D2D07180041D537 /* Model.xcdatamodel */,
+			);
+			currentVersion = A2B666691D2D07180041D537 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A201F3231D2B9D0800F1DD2E /* Project object */;
 }

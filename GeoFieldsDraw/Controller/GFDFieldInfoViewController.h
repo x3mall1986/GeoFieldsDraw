@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class GFDFieldInfo;
+
 @interface GFDFieldInfoViewController : UIViewController
 
-@property (strong, nonatomic) NSDictionary *polygon;
-@property (strong, nonatomic) NSDictionary *property;
+@property (strong, nonatomic) GFDFieldInfo *fieldInfo;
 
 @end

@@ -13,6 +13,9 @@
 #import "GeoJSONSerialization.h"
 #import "MBProgressHUD.h"
 #import "GFDGMSCalculateOperation.h"
+#import "GFDFieldInfo+CoreDataProperties.h"
+
+#import <MagicalRecord/MagicalRecord.h>
 
 @import GoogleMaps;
 
@@ -37,15 +40,65 @@
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [[GFDAPIClient sharedClient] fieldsJsonWithSuccess:^(NSURLSessionDataTask *task, id responseObject) {
-        self.fieldsList = responseObject[@"features"];
-        [self.tableView reloadData];
+        
+        [self saveDataFromServer:responseObject];
+//        [self.tableView reloadData];
         
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@", error.description);
         
+        [self fetchFieldsFromBase];
+        
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
+}
+
+#pragma mark - AdditionalMethods
+- (void)saveDataFromServer:(id)responseObject
+{
+//    self.fieldsList = [GFDFieldInfo MR_importFromArray:responseObject[@"features"]];
+//    
+//    GFDFieldInfo *fieldsListTest = [GFDFieldInfo MR_findFirst];
+//    // Update the entity in the block of saveWithBlock:
+//    [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
+//        // Build the predicate to find the person sought
+//        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstname ==[c] %@ AND lastname ==[c] %@", firstname, lastname];
+//    }];
+//    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreWithCompletion:^(BOOL contextDidSave, NSError * _Nullable error) {
+//        NSLog(@"count of enteties = %ld", [GFDFieldInfo MR_countOfEntities]);
+//    }];
+    
+    NSArray *geoJson = responseObject[@"features"];
+    [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
+        for (NSDictionary *fieldInfoDictionary in geoJson)
+        {
+            NSLog(@"%@ %@", fieldInfoDictionary[@"properties"][@"name"], fieldInfoDictionary[@"properties"][@"till_area"]);
+            // Build the predicate to find the person sought
+            NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name ==[c] %@ AND tillArea ==[c] %@",
+                                      fieldInfoDictionary[@"properties"][@"name"], fieldInfoDictionary[@"properties"][@"till_area"]];
+            
+            NSLog(@"%@", predicate);
+            GFDFieldInfo *fieldFounded  = [GFDFieldInfo MR_findFirstWithPredicate:predicate inContext:localContext];
+
+            if (fieldFounded) {
+                [fieldFounded MR_importValuesForKeysWithObject:fieldInfoDictionary];
+            } else {
+                GFDFieldInfo *fieldInfo = [GFDFieldInfo MR_createEntityInContext:localContext];
+                [fieldInfo MR_importValuesForKeysWithObject:fieldInfoDictionary];
+            }
+        }
+        
+    } completion:^(BOOL success, NSError *error) {
+        [self fetchFieldsFromBase];
+    }];
+}
+
+- (void)fetchFieldsFromBase
+{
+    self.fieldsList = [GFDFieldInfo MR_findAllSortedBy:@"name" ascending:YES];
+    
+    [self.tableView reloadData];
 }
 
 #pragma mark - UITableView Datasource
@@ -64,16 +117,13 @@
                 initWithStyle:UITableViewCellStyleDefault reuseIdentifier:autoCompleteRowIdentifier];
     }
     
-    NSDictionary *fieldInfo = self.fieldsList[indexPath.row];
-//    NSLog(@"%@, %@", fieldInfo[@"properties"], fieldInfo[@"properties"][@"name"]);
-//    NSString *name = fieldInfo[@"properties"][@"name"];
-    cell.nameLabel.text = fieldInfo[@"properties"][@"name"];
-    cell.cropLabel.text = fieldInfo[@"properties"][@"crop"];
-    cell.tillAreaLabel.text = [NSString stringWithFormat:@"%@ ha", fieldInfo[@"properties"][@"till_area"]];
+    GFDFieldInfo *fieldInfo = self.fieldsList[indexPath.row];
+    cell.nameLabel.text = fieldInfo.name;
+    cell.cropLabel.text = fieldInfo.crop;
+    cell.tillAreaLabel.text = [NSString stringWithFormat:@"%@", fieldInfo.tillArea];
     
     return cell;
 }
-
 
  #pragma mark - Navigation
  
@@ -85,20 +135,15 @@
      NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
      
      GFDFieldInfoViewController *viewController = segue.destinationViewController;
-     viewController.polygon = self.fieldsList[indexPath.row][@"geometry"];
-     viewController.property = self.fieldsList[indexPath.row][@"properties"];
+     viewController.fieldInfo = self.fieldsList[indexPath.row];
  }
 
+#pragma mark - Actions
 - (IBAction)segmentedControlValueChanged:(UISegmentedControl *)sender
 {
     if (sender.selectedSegmentIndex == 1) {
         self.mapView.hidden = NO;
         
-//        [self.fieldsList enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//            NSDictionary *polygonDictionary = obj;
-//            
-        
-//        }];
         GMSPath *path = [GFDGMSCalculateOperation pathForMap:self.mapView byGeoObjects:self.fieldsList];
         
         GMSCoordinateBounds *coordinateBounds = [[GMSCoordinateBounds alloc] initWithPath:path];

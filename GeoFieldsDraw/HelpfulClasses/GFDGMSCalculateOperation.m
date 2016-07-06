@@ -8,6 +8,7 @@
 
 #import "GFDGMSCalculateOperation.h"
 #import "GeoJson.h"
+#import "GFDFieldInfo.h"
 
 @implementation GFDGMSCalculateOperation
 
@@ -30,9 +31,9 @@
 {
     GMSMutablePath *path;
     
-    for (NSDictionary *geoObject in geoObjects) {
+    for (GFDFieldInfo *fieldInfo in geoObjects) {
         
-        GMSPath *rectTemp = [self parseGeoCoordinateFromDictionary:geoObject[@"geometry"]];
+        GMSPath *rectTemp = [self parseGeoCoordinateFromDictionary:fieldInfo.geometry];
         
         // Create the polygon, and assign it to the map.
         GMSPolygon *polygon = [GMSPolygon polygonWithPath:rectTemp];
