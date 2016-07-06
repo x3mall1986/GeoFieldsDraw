@@ -11,25 +11,40 @@
 #import "GFDFieldsListTableViewCell.h"
 #import "GFDFieldInfoViewController.h"
 #import "GeoJSONSerialization.h"
+#import "MBProgressHUD.h"
+#import "GFDGMSCalculateOperation.h"
+
+@import GoogleMaps;
 
 @interface ViewController ()<UITableViewDataSource, UITabBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *fieldsList;
+@property (weak, nonatomic) IBOutlet GMSMapView *mapView;
+
+- (IBAction)segmentedControlValueChanged:(UISegmentedControl *)sender;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    self.mapView.mapType = kGMSTypeSatellite;
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     [[GFDAPIClient sharedClient] fieldsJsonWithSuccess:^(NSURLSessionDataTask *task, id responseObject) {
         self.fieldsList = responseObject[@"features"];
         [self.tableView reloadData];
+        
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"%@", error.description);
+        
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 }
 
@@ -73,5 +88,25 @@
      viewController.polygon = self.fieldsList[indexPath.row][@"geometry"];
      viewController.property = self.fieldsList[indexPath.row][@"properties"];
  }
+
+- (IBAction)segmentedControlValueChanged:(UISegmentedControl *)sender
+{
+    if (sender.selectedSegmentIndex == 1) {
+        self.mapView.hidden = NO;
+        
+//        [self.fieldsList enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+//            NSDictionary *polygonDictionary = obj;
+//            
+        
+//        }];
+        GMSPath *path = [GFDGMSCalculateOperation pathForMap:self.mapView byGeoObjects:self.fieldsList];
+        
+        GMSCoordinateBounds *coordinateBounds = [[GMSCoordinateBounds alloc] initWithPath:path];
+        [self.mapView animateWithCameraUpdate:[GMSCameraUpdate fitBounds:coordinateBounds]];
+        
+    } else {
+        self.mapView.hidden = YES;
+    }
+}
 
 @end

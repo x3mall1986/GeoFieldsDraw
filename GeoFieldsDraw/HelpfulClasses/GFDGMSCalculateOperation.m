@@ -26,7 +26,34 @@
     return polygon;
 }
 
-+ (GMSPath *)parseGeoCoordinateFromDictionary:(NSDictionary *)dictionary
++ (GMSPath *)pathForMap:(GMSMapView *)mapsView byGeoObjects:(NSArray *)geoObjects
+{
+    GMSMutablePath *path;
+    
+    for (NSDictionary *geoObject in geoObjects) {
+        
+        GMSPath *rectTemp = [self parseGeoCoordinateFromDictionary:geoObject[@"geometry"]];
+        
+        // Create the polygon, and assign it to the map.
+        GMSPolygon *polygon = [GMSPolygon polygonWithPath:rectTemp];
+        polygon.fillColor = [UIColor colorWithWhite:1 alpha:0.2];
+        polygon.strokeColor = [UIColor whiteColor];
+        polygon.strokeWidth = 2;
+        polygon.map = mapsView;
+        
+        if (!path) {
+            path = [[GMSMutablePath alloc] initWithPath:rectTemp];
+        } else {
+            for (int i = 0; i < rectTemp.count; i++) {
+                [path addCoordinate:[rectTemp coordinateAtIndex:i]];
+            }
+        }
+    }
+    
+    return path;
+}
+
++ (GMSMutablePath *)parseGeoCoordinateFromDictionary:(NSDictionary *)dictionary
 {
     GMSMutablePath *rect = [GMSMutablePath path];
     
@@ -55,7 +82,7 @@
         }
     }
     
-    return [rect copy];
+    return rect;
 }
 
 @end

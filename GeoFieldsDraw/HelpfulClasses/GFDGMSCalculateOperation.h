@@ -12,5 +12,6 @@
 @interface GFDGMSCalculateOperation : NSObject
 
 + (GMSPolygon *)polygonForMap:(GMSMapView *)mapsView byGeoObject:(NSDictionary *)geoObject;
++ (GMSPath *)pathForMap:(GMSMapView *)mapsView byGeoObjects:(NSArray *)geoObjects;
 
 @end

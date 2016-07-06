@@ -39,16 +39,4 @@
     [self.mapsView animateWithCameraUpdate:[GMSCameraUpdate fitBounds:coordinateBounds]];
 }
 
-- (NSArray *)getCoordinatesFromMultyLevelArray:(NSArray *)multiLevelArray
-{
-    NSArray *poligonArray;
-    if (multiLevelArray.count == 1) {
-        poligonArray = [self getCoordinatesFromMultyLevelArray:multiLevelArray.firstObject];
-    } else {
-        poligonArray = multiLevelArray;
-    }
-    
-    return poligonArray;
-}
-
 @end
