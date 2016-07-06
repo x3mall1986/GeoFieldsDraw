@@ -8,8 +8,8 @@
 
 #import "GFDAPIClient.h"
 
-static NSString *const kBaseURLString = @"http://fs181.www.ex.ua";
-static NSString *const kFileURLString = @"get/502973133522/212b5b0dccf1467f8874c2aee12cac8f/256389018/fields.json";
+static NSString *const kBaseURLString = @"https://raw.githubusercontent.com/";
+static NSString *const kFileURLString = @"x3mall1986/GeoFieldsDraw/master/fields.json";
 
 @implementation GFDAPIClient
 
